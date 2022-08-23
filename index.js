@@ -1,25 +1,16 @@
 const config = require('config')
 const express = require('express')
+const db = require('./db')
 const app = express()
 const port = config.get('port')
 
-// mysql connection
-// const mysql = require('mysql')
-// const connection = mysql.createConnection({
-//   host: config.get('mysql.host'),
-//   user: config.get('mysql.user'),
-//   password: config.get('mysql.password'),
-//   database: config.get('mysql.database')
-// })
-
-// connection.connect()
-
-app.get('/v1', (req, res) => {
-
-  res.json({
-    status: 'ok',
-    version: 'v1'
-  })
+app.get('/v1/users/read', async (req, res) => {
+  const results = await db.query('SELECT * FROM tb_user')
+  res.json({ status: 'ok', data: results })
+})
+app.get('/v1/users/create', async (req, res) => {
+  const results = await db.query('INSERT INTO tb_user(id, full_name, email, password) VALUES ("aadf", "John Doe", "adfdfd", "dfdfdfdfdf")')
+  res.json({ status: 'ok', data: results })
 })
 
 app.listen(port, () => {
