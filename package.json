@@ -1,0 +1,22 @@
+{
+  "name": "ecertificate-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/labkoding/ecertificate-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/labkoding/ecertificate-api/issues"
+  },
+  "homepage": "https://github.com/labkoding/ecertificate-api#readme",
+  "dependencies": {
+    "config": "^3.3.7"
+  }
+}
