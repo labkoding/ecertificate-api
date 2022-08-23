@@ -3,6 +3,6 @@
 ### start
 
 #### for windows
-    set NODE_ENV=dev & npm start
+    set NODE_ENV=development & npm start
 #### for linux
-    NODE_ENV=production npm start
+    NODE_ENV=development npm start
