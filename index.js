@@ -6,4 +6,4 @@ var server = http.createServer(function (req, res) {
   var response = [message, version].join('\n')
   res.end(response)
 })
-server.listen()
+server.listen(8080)
