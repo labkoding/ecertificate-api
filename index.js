@@ -3,8 +3,11 @@ const express = require('express')
 const app = express()
 const port = config.get('port')
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/v1', (req, res) => {
+  res.json({
+    status: 'ok',
+    version: 'v1'
+  })
 })
 
 app.listen(port, () => {
