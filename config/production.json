@@ -2,8 +2,8 @@
     "port": 80,
     "mysql": {
         "host": "127.0.0.1",
-        "user": "root",
-        "password": "password",
-        "database": "db_ecertificate"
+        "user": "tokr7346_labkoding_sertif",
+        "password": "labkoding123#",
+        "database": "tokr7346_labkoding_sertif"
     }
 }
