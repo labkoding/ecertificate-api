@@ -159,9 +159,11 @@ app.post('/v1/users/signup', async (req, res) => {
   console.log('signup invoked')
   const now = moment().format('YYYY-MM-DD HH:mm:ss.SSS')
   const userId = '' + uuid.v4()
+  // convert email to lowercase
+  const email = req.body.email.toLowerCase()
   let sql = 'INSERT INTO tb_user(id, full_name, email, password, created_dt, updated_dt) VALUES ("' + userId + '",'
   sql += '"' + sanitizeString(req.body.fullname) + '",'
-  sql += '"' + sanitizeString(req.body.email) + '",'
+  sql += '"' + sanitizeString(email) + '",'
   sql += '"' + SHA256(req.body.password) + '",'
   sql += '"' + now + '",'
   sql += '"' + now + '")'
